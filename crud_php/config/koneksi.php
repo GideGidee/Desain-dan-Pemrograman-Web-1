@@ -15,6 +15,6 @@ if (!$conn) {
 }
 
 // Print success message (optional)
-echo "Connected to database successfully!";
+// echo "Connected to database successfully!";
 
 ?>

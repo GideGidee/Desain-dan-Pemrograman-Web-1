@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <?php include "config/koneksi.php"; ?>
     <section class="container">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-biru">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand text-light" href="index.php">Navbar</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -86,6 +87,9 @@
         </div>
     </section>
 
+    <br>
+    <br>
+
     <section class="container berita">
         <div class="row">
             <h2 class="text-center">Berita</h2>
@@ -96,32 +100,37 @@
 
                     if (mysqli_num_rows($result)) {
                         while ($row = mysqli_fetch_assoc($result)) {
+                            $id_berita = $row["id_berita"];
                             ?>
                             <div class="col">
-                    <div class="card h-100">
-                        <img src="<?php echo $row["gambar"]?>" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $row["judul"]; ?></h5>
-                            <p class="card-text"><?php echo $row["konten"]; ?></p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-body-secondary"><?php echo $row["created_at"];?></small>
-                        </div>
-                    </div>
-                </div>
+                                <div class="card h-100">
+                                    <img src="<?php echo $row["gambar"]?>" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><?php echo $row["judul"]; ?></h5>
+                                        <br>
+                                        <br>
+                                        <a href="berita.php?id=<?php echo $id_berita; ?>" class="btn btn-primary">Selengkapnya</a>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-body-secondary"><?php echo $row["created_at"];?></small>
+                                    </div>
+                                </div>
+                            </div>
                             <?php
                         }
                     } else {
                         echo "No data";
                     }
-                    
                 ?>
             </div>
         </div>
     </section>
 
+    <br>
+    <br>
+
     <section>
-        <div class="bg-success text-center p-3 text-light">
+        <div class="bg-hijo text-center p-3 text-light">
             <small>Copyright &copy; 2023. BelajarBootsteap.com | All rights
                 reserved.</small>
         </div>

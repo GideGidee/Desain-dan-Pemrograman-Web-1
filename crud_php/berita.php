@@ -24,7 +24,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="">Home</a>
+                            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Link</a>
@@ -126,7 +126,7 @@
 </section>
 <br>
 <br>
-<section>
+    <section>
         <div class="bg-hijo text-center p-3 text-light">
             <small>Copyright &copy; 2023. BelajarBootsteap.com | All rights
                 reserved.</small>

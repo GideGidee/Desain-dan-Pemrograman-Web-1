@@ -109,7 +109,7 @@
                                         <h5 class="card-title"><?php echo $row["judul"]; ?></h5>
                                         <br>
                                         <br>
-                                        <a href="berita.php?id=<?php echo $id_berita; ?>" class="btn btn-primary">Selengkapnya</a>
+                                        <a href="berita.php?id=<?php echo $id_berita;?>" class="btn btn-primary">Selengkapnya</a>
                                     </div>
                                     <div class="card-footer">
                                         <small class="text-body-secondary"><?php echo $row["created_at"];?></small>
